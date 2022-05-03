@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Porfolio | Home |</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="sections">
+            <div id="section1" onmouseenter="sectionOneHover()" onmouseleave="sectionOneReset()">
+                <div id="aboutMe" class="staticText">
+                    <ul id="about-text" class="static-text">
+                        <li>A</li>
+                        <li>B</li>
+                        <li>O</li>
+                        <li>U</li>
+                        <li>T</li>
+                    </ul>
+                    <ul id="me-text" class="static-text">
+                        <li>M</li>
+                        <li>E</li>
+                    </ul>
+                    <h1 id="aboutMeText-horizontal" class="horizontal-text">ABOUT ME</h1>
+                </div>
+                <div id="introduction-text">
+                    <p>Hi my name is Mohammed Qureshi and welcome to my website. I am 26 years old and have been coding since the beginning of 2022. This is the first website I have created so I hope you enjoy!</p>
+                </div>
+            </div>
+            <div id="section2" onmouseenter="sectionTwoHover()" onmouseleave="sectionTwoReset()">
+                <div id="Stack" class="staticText">
+                    <ul id="stack-text" class="static-text">
+                        <li>S</li>
+                        <li>T</li>
+                        <li>A</li>
+                        <li>C</li>
+                        <li>K</li>
+                    </ul> 
+                    <h1 id="stackText-horizontal" class="horizontal-text">STACK</h1>
+                </div> 
+                <div id="stack-section">
+                    <div id="frontend" class="frontend-static" onmouseenter="frontendHover()" onmouseleave="frontendReset()">
+                        <h1 id="frontend-text">FRONT END</h1>
+                        <div id="img-div">
+                        <img src="html.PNG" id="html-img">
+                        <img src="htmlorange.PNG" id="htmlorange-img" onclick="showHTMLText()">
+                        <img src="css.PNG" id="css-img">
+                        <img src="cssorange.PNG" id="cssorange-img" onclick="showCSSText()">
+                        <img src="javascript.PNG" id="javascript-img">
+                        <img src="javascriptorange.PNG" id="javascriptorange-img" onclick="showJavaScriptText()">
+                        </div>
+                    </div>
+                        <div id="frontend-subtext">
+                            <p id="HTMLText" class="frontend-subtext">I have a deep understanding of HTML and its syntax</p>
+                            <p id="CSSText" class="frontend-subtext">I am very confident with CSS and I have an excellent understanding of the syntax and its uses. I am able to crate complexe designs and animations, making my websites and web apps more visually pleasing</p>
+                            <p id="javaScriptText" class="frontend-subtext">I have a good understanding of JavaScript, its syntax and its use cases. I am able to implement functions, for loops and use the DOM to obtain data from HTML and also from the user when needed, making my websites and web apps more interactive for the user</p>
+                        </div>
+                </div>       
+            </div>
+            <div id="section3" onmouseenter="sectionThreeHover()" onmouseleave="sectionThreeReset()">
+                <div id="Projects" class="staticText">
+                    <ul id="projects-text" class="static-text">
+                        <li>P</li>
+                        <li>R</li>
+                        <li>O</li>
+                        <li>J</li>
+                        <li>E</li>
+                        <li>C</li>
+                        <li>T</li>
+                        <li>S</li>
+                    </ul>
+                    <h1 id="projectsText-horizontal" class="horizontal-text">PROJECTS</h1>
+                </div>
+                <div id="projects-thumbnails">
+                    <div class="thumbnails">
+                        <a href="https://spontaneous-tartufo-4796dc.netlify.app/" target="_blank"><img src="/diceGameThumbNail.PNG" id="dicegame-thumbnail" onmouseenter="diceHover()" onmouseleave="diceLeave()"></a>
+                        <p id="dice-text">Dice Game</p>
+                    </div>
+                    <div class="thumbnails">
+                        <a href="https://cheerful-douhua-f0fc21.netlify.app/" target="_blank"><img src="/pianoThumbNail.PNG" id="piano-thumbnail" onmouseenter="pianoHover()" onmouseleave="pianoLeave()"></a>
+                        <p id="piano-text">Virtual Piano</p>
+                    </div>
+                    <div class="thumbnails">
+                        <a href="https://soft-snickerdoodle-94ef39.netlify.app/" target="_blank"><img src="/appleWebsiteClone.PNG" id="appleClone-thumbnail" onmouseenter="webCloneHover()" onmouseleave="webCloneLeave()"></a>
+                        <p id="web-clone-text">Apple Website Clone</p>
+                    </div>
+                </div>
+            </div>
+            <div id="section4" onmouseenter="sectionFourHover()" onmouseleave="sectionFourReset()">
+                <div id="Contact" class="staticText">
+                    <ul id="contact-text" class="static-text">
+                        <li>C</li>
+                        <li>O</li>
+                        <li>N</li>
+                        <li>T</li>
+                        <li>A</li>
+                        <li>C</li>
+                        <li>T</li>
+                    </ul>
+                    <h1 id="contactText-horizontal" class="horizontal-text">CONTACT</h1>
+                </div>
+                <div id="contact-message">
+                    <input type="email" id="contact-email-input" placeholder="Email Adress..." autocomplete="none">
+                    <input type="text" placeholder="Name..." id="contact-name-input" autocomplete="none">
+                    <textarea id="contact-message-input" cols="30" rows="10" placeholder="Message..." autocomplete="none"></textarea> <br>
+                    <button type="submit" id="contact-send-btn" class="contact-input-btn">Send</button>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
