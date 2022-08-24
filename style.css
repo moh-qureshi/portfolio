@@ -371,8 +371,9 @@ form button:hover{
         padding-bottom: 10px;
     }
     #welcome-section img{
-        height: 40vh;
+        height: 70vh;
         width: 50vw;
+        margin-bottom: 5vh;
     }
     .about-section-box, #about-me-text{
         font-size: 1em;
@@ -429,6 +430,14 @@ form button:hover{
 }
 
 @media screen and (max-width: 425px) {
+    #welcome-section img{
+        height: 70vh;
+        width: 90vw;
+    }
+    #welcome-intro{
+        width: 120vw;
+        font-size: 1.2em;
+    }
     #experience-text div{
         width: 160vw;
     }
@@ -454,4 +463,18 @@ form button:hover{
     form input{
         width: 80vw;
     }
+}
+
+@media screen and (max-width: 375px) {
+ #experience-text img{
+    height: 60vh;
+    width: 70vw;
+ }
+
+ #projects-slider{
+    margin-left: 52vw;
+}   
+.project-links p{
+    margin: 20px 29px;
+}
 }

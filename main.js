@@ -132,11 +132,14 @@ function moveRight(){
     if(window.outerWidth > 768 && projectsSliderPosition !== 2460){
         projectsSliderPosition += 820
         projectsSlider.scroll(projectsSliderPosition, 0)
-    }else if(window.outerWidth <= 768 && window.outerWidth > 425 && projectsSliderPosition !== 1383){
+    } else if(window.outerWidth <= 768 && window.outerWidth > 425 && projectsSliderPosition !== 1383){
         projectsSliderPosition += 461
         projectsSlider.scroll(projectsSliderPosition, 0)
-    } else if(window.outerWidth <= 425 && projectsSliderPosition !== 1275){
+    } else if(window.outerWidth <= 425 && window.outerWidth > 375 && projectsSliderPosition !== 1275){
         projectsSliderPosition += 425
+        projectsSlider.scroll(projectsSliderPosition, 0)
+    } else if(window.outerWidth <= 375 && projectsSliderPosition !== 1125){
+        projectsSliderPosition += 375
         projectsSlider.scroll(projectsSliderPosition, 0)
     }
     hideSnakeInfo()
@@ -152,8 +155,11 @@ function moveLeft(){
     } else if(window.outerWidth <= 768 && window.outerWidth > 425 && projectsSliderPosition >= 461){
         projectsSliderPosition -= 461
         projectsSlider.scroll(projectsSliderPosition, 0)
-    }else if(window.outerWidth <= 425 && projectsSliderPosition !== 1275){
+    } else if(window.outerWidth <= 425 && window.outerWidth > 375 && projectsSliderPosition >=425){
         projectsSliderPosition -= 425
+        projectsSlider.scroll(projectsSliderPosition, 0)
+    } else if(window.outerWidth <= 375 && projectsSliderPosition >= 375){
+        projectsSliderPosition -= 375
         projectsSlider.scroll(projectsSliderPosition, 0)
     }
     hideSnakeInfo()
