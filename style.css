@@ -466,15 +466,34 @@ form button:hover{
 }
 
 @media screen and (max-width: 375px) {
- #experience-text img{
-    height: 60vh;
-    width: 70vw;
- }
+    #experience-text img{
+        height: 60vh;
+        width: 70vw;
+    }
 
- #projects-slider{
-    margin-left: 52vw;
-}   
-.project-links p{
-    margin: 20px 29px;
+    #projects-slider{
+        margin-left: 52vw;
+    }   
+    .project-links p{
+        margin: 20px 29px;
+    }
 }
+
+@media screen and (max-width: 320px) {
+    #welcome-intro{
+        width: 160vw;
+    }
+    #experience-text div{
+        width: 180vw;
+    }
+    #projects-slider{
+        margin-left: 60vw;
+        width: 120vw;
+    }
+    .project-links p{
+        margin: 20px 30px;
+    }
+    .project-thumbnail img{
+        width: 120vw;
+    }   
 }
