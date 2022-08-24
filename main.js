@@ -19,6 +19,8 @@ const experienceSection = document.getElementById("experience-section")
 //projects section
 const projectsSection = document.getElementById("projects-section")
 const projectsSlider = document.getElementById("projects-slider")
+const leftArrow = document.getElementById("left-arrow")
+const rightArrow = document.getElementById("right-arrow")
 const snakeMoreInfo = document.getElementById("snake-more-info")
 const weatherMoreInfo = document.getElementById("weather-more-info")
 const footasylumMoreInfo = document.getElementById("footasylum-more-info")
@@ -126,6 +128,8 @@ contactSection.addEventListener("mouseenter", () =>{
 })
 
 
+
+
 let projectsSliderPosition = 0
 
 function moveRight(){
@@ -173,6 +177,8 @@ function moveLeft(){
     hideFootasylumInfo()
     hideDiceInfo()
 }
+leftArrow.addEventListener("click", moveLeft)
+rightArrow.addEventListener("click", moveRight)
 
 function showSnakeInfo(){
     snakeGameInfo.style.display = "flex"

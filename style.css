@@ -351,10 +351,7 @@ form button:hover{
 }
 
 @media screen and (max-width: 768px) {
-    body{
-        width: 768px;
-    }
-
+    
     #navbar, #nav{
         font-size: 1.1em;
         justify-content: center;
@@ -398,16 +395,15 @@ form button:hover{
 
 
     #experience-text img{
-        height: 40vh;
         width: 40vw;
     }
 
     #slider-arrows{
-        top: 25vh;
+        top: 40vh;
     }
 
     .project-thumbnail img{
-        height: 30vh;
+        height: 50vh;
     }
 
     .project-links{
