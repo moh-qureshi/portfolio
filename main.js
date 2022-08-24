@@ -1,227 +1,196 @@
+const circle = document.getElementById("circle")
+const navbar = document.getElementById("nav")
+const aboutMeNavText = document.getElementById("about-me-nav")
+const techStackNavText = document.getElementById("tech-stack-nav")
+const experienceNavText = document.getElementById("experience-nav")
+const projectsNavText = document.getElementById("projects-nav")
+const contactNavText = document.getElementById("contact-me-nav")
 
-// About me section contents
-let aboutMeHorizontalText = document.getElementById("aboutMeText-horizontal")
-const aboutMeSection = document.getElementById("section1")
-const introductionText = document.getElementById("introduction-text")
+//welcome section
+const welcomeSection = document.getElementById("welcome-section")
 
-//visuals
-aboutMeHorizontalText.style.display = "none"
-introductionText.style.display = "none"
+//about me section
+const aboutMeSection = document.getElementById("about-section")
+const aboutMeBoxSection = document.getElementById("about-section-boxes")
+//tech stack section
+const techStackSection = document.getElementById("tech-stack-section")
+//experience section
+const experienceSection = document.getElementById("experience-section")
+//projects section
+const projectsSection = document.getElementById("projects-section")
+const projectsSlider = document.getElementById("projects-slider")
+const snakeMoreInfo = document.getElementById("snake-more-info")
+const weatherMoreInfo = document.getElementById("weather-more-info")
+const footasylumMoreInfo = document.getElementById("footasylum-more-info")
+const diceMoreInfo = document.getElementById("dice-more-info")
+const snakeGameInfo = document.getElementById("snake-game-info")
+const weatherAppInfo = document.getElementById("weather-app-info")
+const footasylumCloneInfo = document.getElementById("footasylum-info")
+const diceGameInfo = document.getElementById("dice-game-info")
+//contact section
+const contactSection = document.getElementById("contact-section")
 
-// Stack section contents
-let stackHorizontalText = document.getElementById("stackText-horizontal")
-const stackSection = document.getElementById("section2")
-let frontendSection = document.getElementById("frontend")
-let htmlImg = document.getElementById("html-img")
-let htmlOrangeImg = document.getElementById("htmlorange-img")
-let cssImg = document.getElementById("css-img")
-let cssOrangeImg = document.getElementById("cssorange-img")
-let javascriptImg = document.getElementById("javascript-img")
-let javascriptOrangeImg = document.getElementById("javascriptorange-img")
-const htmlTextSection = document.getElementById("HTMLText")
-const cssTextSection = document.getElementById("CSSText")
-const javaScriptTextSection = document.getElementById("javaScriptText")
+const welcomeText = document.getElementById("welcome-text")
+const text = ["Welcome To My Portfolio", "Aspiring FrontEnd Developer", "Creative Mastermind", "Passionate About Web Design"]
+let mode = "light"
+let count = 0
+let index = 0
+let currentText = ""
+let letter = ""
 
-//visuals
-stackHorizontalText.style.display = "none"
-htmlOrangeImg.style.display = "none"
-cssOrangeImg.style.display = "none"
-javascriptOrangeImg.style.display = "none"
-frontendSection.style.visibility = "hidden"
-htmlTextSection.style.display = "none"
-cssTextSection.style.display = "none"
-javaScriptTextSection.style.display = "none"
+function test(){
+    if(mode === "light"){
+        mode = "dark"
+        circle.style.transform = "translateX(-50px)"
+        welcomeSection.style.background = "linear-gradient(silver, lightgreen);"
+    } else if(mode === "dark"){
+        mode = "light"
+        circle.style.transform = "translateX(0px)"
+        console.log("dark")
+}}
 
-// Project section contents
-let projectsHorizontalText = document.getElementById("projectsText-horizontal")
-const projectsSection = document.getElementById("section3")
-const projectsThumbnails = document.getElementById("projects-thumbnails")
-const diceGameThumbnailText = document.getElementById("dice-text")
-const pianoThumbnailText = document.getElementById("piano-text")
-const webCloneThumbnailText = document.getElementById("web-clone-text")
+(function type(){
 
-//visuals
-projectsHorizontalText.style.display = "none"
-diceGameThumbnailText.style.display = "none"
-pianoThumbnailText.style.display = "none"
-webCloneThumbnailText.style.display = "none"
-projectsThumbnails.style.visibility = "hidden"
+    if(count === text.length){
+        count = 0
+    }
+    currentText = text[count]
+    letter = currentText.slice(0, ++index)
+    document.querySelector(".typing").textContent = letter
+    if(letter.length === currentText.length){
+        count++
+        index = 0
+    }
+    setTimeout(type, 200)
+}())
 
-// Contact section contents
-let contactHorizontalText = document.getElementById("contactText-horizontal")
-const contactSection = document.getElementById("section4")
-const contactForm = document.getElementById("contact-message")
-contactHorizontalText.style.display = "none"
-contactForm.style.visibility = "hidden"
+window.addEventListener("scroll", () =>{
+    if(window.scrollY < 200){
+        navbar.style.position = "initial"
+        navbar.style.background = "linear-gradient(grey, black)"
+    } else if(window.scrollY >= 200){
+        navbar.style.position = "fixed"
+        navbar.style.background = "rgb(0,0,0, 0.5)"
 
+    }
+})
 
 
+welcomeSection.addEventListener("mouseenter", () =>{
+    aboutMeNavText.style.color = "white"
+    techStackNavText.style.color = "white"
+    experienceNavText.style.color = "white"
+    projectsNavText.style.color = "white"
+    contactNavText.style.color = "white"
+})
 
-function sectionOneHover(){
-    stackSection.style.filter = "blur(4px)"
-    projectsSection.style.filter = "blur(4px)"
-    contactSection.style.filter = "blur(4px)"
-    let aboutText = document.getElementById("about-text")
-    let meText = document.getElementById("me-text")
-    let timer = setTimeout(aboutMeTextRemover, 900)
-    function aboutMeTextRemover(){
-        aboutText.style.display = "none" 
-        meText.style.display = "none"
-        aboutMeHorizontalText.style.display = "initial"
-        aboutMeHorizontalText.classList.add("text-animation")
-        introductionText.style.display = "initial"
-        document.querySelector("p").classList.add("subheading-animate")
+aboutMeSection.addEventListener("mouseenter", () =>{
+    aboutMeNavText.style.color = "orange"
+    techStackNavText.style.color = "white"
+    experienceNavText.style.color = "white"
+    projectsNavText.style.color = "white"
+    contactNavText.style.color = "white"
+})
+
+techStackSection.addEventListener("mouseenter", () =>{
+    techStackNavText.style.color = "orange"
+    aboutMeNavText.style.color = "white"
+    experienceNavText.style.color = "white"
+    projectsNavText.style.color = "white"
+    contactNavText.style.color = "white"
+})
+
+experienceSection.addEventListener("mouseenter", () =>{
+    experienceNavText.style.color = "orange"
+    techStackNavText.style.color = "white"
+    aboutMeNavText.style.color = "white"
+    projectsNavText.style.color = "white"
+    contactNavText.style.color = "white"
+})
+
+projectsSection.addEventListener("mouseenter", () =>{
+    projectsNavText.style.color = "orange"
+    experienceNavText.style.color = "white"
+    techStackNavText.style.color = "white"
+    aboutMeNavText.style.color = "white"
+    contactNavText.style.color = "white"
+})
+
+contactSection.addEventListener("mouseenter", () =>{
+    contactNavText.style.color = "orange"
+    projectsNavText.style.color = "white"
+    experienceNavText.style.color = "white"
+    techStackNavText.style.color = "white"
+    aboutMeNavText.style.color = "white"
+})
+
+
+let projectsSliderPosition = 0
+
+function moveRight(){
+    if(projectsSliderPosition !== 2460){
+        projectsSliderPosition += 820
+        projectsSlider.scroll(projectsSliderPosition, 0)
+        hideSnakeInfo()
+        hideWeatherInfo()
+        hideFootasylumInfo()
+        hideDiceInfo()
     }
 }
 
-
-function sectionOneReset(){
-    stackSection.style.filter = "none"
-    projectsSection.style.filter = "none"
-    contactSection.style.filter = "none"
-    let aboutText = document.getElementById("about-text")
-    let meText = document.getElementById("me-text")
-    aboutText.style.display = "initial" 
-    meText.style.display = "initial"
-    aboutMeHorizontalText.style.display = "none"
-    introductionText.style.display = "none"
+function moveLeft(){
+    if(projectsSliderPosition >= 820){
+        projectsSliderPosition -= 820
+        projectsSlider.scroll(projectsSliderPosition, 0)
+        hideSnakeInfo()
+        hideWeatherInfo()
+        hideFootasylumInfo()
+        hideDiceInfo()
+    }
 }
 
-
-function sectionTwoHover(){
-    aboutMeSection.style.filter = "blur(4px)"
-    projectsSection.style.filter = "blur(4px)"
-    contactSection.style.filter = "blur(4px)"
-    let stackText = document.getElementById("stack-text")
-    stackText.style.display = "none"
-    stackHorizontalText.style.display = "initial"
-    stackHorizontalText.classList.add("text-animation")
-    frontendSection.style.visibility = "visible"
-    frontendSection.classList.add("subheading-animate")
+function showSnakeInfo(){
+    snakeGameInfo.style.display = "flex"
+    snakeMoreInfo.textContent = "Hide Info"
+    snakeMoreInfo.setAttribute("onclick", "hideSnakeInfo()")    
 }
 
-function sectionTwoReset(){
-    aboutMeSection.style.filter = "none"
-    projectsSection.style.filter = "none"
-    contactSection.style.filter = "none"
-    let stackText = document.getElementById("stack-text")
-    stackText.style.display = "initial" 
-    stackHorizontalText.style.display = "none"
-    frontendSection.style.visibility = "hidden"
-    htmlTextSection.style.display = "none"
-    cssTextSection.style.display = "none"
-    javaScriptTextSection.style.display = "none"
+function hideSnakeInfo(){
+    snakeGameInfo.style.display = "none"
+    snakeMoreInfo.textContent = "More Info"
+    snakeMoreInfo.setAttribute("onclick", "showSnakeInfo()")    
 }
 
-function sectionThreeHover(){ 
-    aboutMeSection.style.filter = "blur(4px)"
-    stackSection.style.filter = "blur(4px)"
-    contactSection.style.filter = "blur(4px)"
-    let projectsText = document.getElementById("projects-text")
-    projectsText.style.display = "none"
-    projectsHorizontalText.style.display = "initial"
-    projectsHorizontalText.classList.add("text-animation")
-    projectsThumbnails.style.visibility = "visible"
+function showWeatherInfo(){
+    weatherAppInfo.style.display = "flex"
+    weatherMoreInfo.textContent = "Hide Info"
+    weatherMoreInfo.setAttribute("onclick", "hideWeatherInfo()")    
 }
 
-function sectionThreeReset(){
-    aboutMeSection.style.filter = "none"
-    stackSection.style.filter = "none"
-    contactSection.style.filter = "none"
-    let projectsText = document.getElementById("projects-text")
-    projectsText.style.display = "initial"
-    projectsHorizontalText.style.display = "none"
-    projectsThumbnails.style.visibility = "hidden"
+function hideWeatherInfo(){
+    weatherAppInfo.style.display = "none"
+    weatherMoreInfo.textContent = "More Info"
+    weatherMoreInfo.setAttribute("onclick", "showWeatherInfo()")    
+}
+function showFootasylumInfo(){
+    footasylumCloneInfo.style.display = "flex"
+    footasylumMoreInfo.textContent = "Hide Info"
+    footasylumMoreInfo.setAttribute("onclick", "hideFootasylumInfo()")    
 }
 
-function sectionFourHover(){
-    aboutMeSection.style.filter = "blur(4px)"
-    projectsSection.style.filter = "blur(4px)"
-    stackSection.style.filter = "blur(4px)"
-    let contactText = document.getElementById("contact-text")
-    contactText.style.display = "none"
-    contactHorizontalText.style.display = "initial"
-    contactHorizontalText.classList.add("text-animation")
-    contactForm.style.visibility = "visible"
-
+function hideFootasylumInfo(){
+    footasylumCloneInfo.style.display = "none"
+    footasylumMoreInfo.textContent = "More Info"
+    footasylumMoreInfo.setAttribute("onclick", "showFootasylumInfo()")    
+}
+function showDiceInfo(){
+    diceGameInfo.style.display = "flex"
+    diceMoreInfo.textContent = "Hide Info"
+    diceMoreInfo.setAttribute("onclick", "hideDiceInfo()")    
 }
 
-function sectionFourReset(){
-    aboutMeSection.style.filter = "none"
-    projectsSection.style.filter = "none"
-    contactSection.style.filter = "none"
-    let contactText = document.getElementById("contact-text")
-    contactText.style.display = "initial"
-    contactHorizontalText.style.display = "none"
-    contactForm.style.visibility = "hidden"
-
-}
-
-function frontendHover(){
-    htmlImg.style.display ="none"
-    cssImg.style.display ="none"
-    javascriptImg.style.display ="none"
-    htmlOrangeImg.style.display = "initial"
-    cssOrangeImg.style.display = "initial"
-    javascriptOrangeImg.style.display = "initial"
-    htmlOrangeImg.classList.add("image-animation")
-    cssOrangeImg.classList.add("image-animation")
-    javascriptOrangeImg.classList.add("image-animation")
-    htmlOrangeImg.classList.remove("img-hover")
-    cssOrangeImg.classList.remove("img-hover")
-    javascriptOrangeImg.classList.remove("img-hover")
-}
-
-function frontendReset(){
-    htmlImg.style.display ="initial"
-    cssImg.style.display ="initial"
-    javascriptImg.style.display ="initial"
-    htmlOrangeImg.style.display = "none"
-    cssOrangeImg.style.display = "none"
-    javascriptOrangeImg.style.display = "none"
-}
-
-function showHTMLText(){
-    htmlTextSection.style.display = "initial"
-    htmlTextSection.classList.add("subheading-animate")
-    cssTextSection.style.display = "none"
-    javaScriptTextSection.style.display = "none"
-}
-
-function showCSSText(){
-    htmlTextSection.style.display = "none"
-    javaScriptTextSection.style.display = "none"
-    cssTextSection.style.display = "initial"
-    cssTextSection.classList.add("subheading-animate")
-}
-
-function showJavaScriptText(){
-    htmlTextSection.style.display = "none"
-    cssTextSection.style.display = "none"
-    javaScriptTextSection.style.display = "initial"
-    javaScriptTextSection.classList.add("subheading-animate")
-}
-
-function diceHover(){
-    diceGameThumbnailText.style.display = "initial"
-}
-
-function pianoHover(){
-    pianoThumbnailText.style.display = "initial"
-}
-
-function webCloneHover(){
-    webCloneThumbnailText.style.display = "initial"
-}
-
-function diceLeave(){
-    diceGameThumbnailText.style.display = "none"
-}
-
-function pianoLeave(){
-    pianoThumbnailText.style.display = "none"
-}
-
-function webCloneLeave(){
-    webCloneThumbnailText.style.display = "none"
+function hideDiceInfo(){
+    diceGameInfo.style.display = "none"
+    diceMoreInfo.textContent = "More Info"
+    diceMoreInfo.setAttribute("onclick", "showDiceInfo()")    
 }

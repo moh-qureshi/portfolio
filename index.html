@@ -4,111 +4,272 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>My Porfolio | Home |</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/fd19a96ad8.js" crossorigin="anonymous"></script>
     </head>
+    <header id="nav">
+            <ul id="navbar">
+                <li id="about-me-nav">About Me</li>
+                <li id="tech-stack-nav">Tech Stack</li>
+                <li id="experience-nav">Experience</li>
+                <li id="projects-nav">Projects</li>
+                <li id="contact-me-nav">Contact Me</li>
+            </ul>
+    </header>
     <body>
-        <div id="sections">
-            <div id="section1" onmouseenter="sectionOneHover()" onmouseleave="sectionOneReset()">
-                <div id="aboutMe" class="staticText">
-                    <ul id="about-text" class="static-text">
-                        <li>A</li>
-                        <li>B</li>
-                        <li>O</li>
-                        <li>U</li>
-                        <li>T</li>
-                    </ul>
-                    <ul id="me-text" class="static-text">
-                        <li>M</li>
-                        <li>E</li>
-                    </ul>
-                    <h1 id="aboutMeText-horizontal" class="horizontal-text">ABOUT ME</h1>
+        <section id="welcome-section">
+            <img src="/images/profile.jpg" id="profile-img">
+            <div id="welcome-text-section">
+                <div id="welcome-text">
+                    <h1 id="welcome-title">Mohammed Qureshi</h1>
+                    <h1 class="typing"></h1>
                 </div>
-                <div id="introduction-text">
-                    <p>Hi my name is Mohammed Qureshi and welcome to my website. I am 26 years old and have been coding since the beginning of 2022. This is the first website I have created so I hope you enjoy!</p>
+                <div id="welcome-intro">
+                    <p>Hello and thank you for viewing my portfolio. I am an aspiring web developer that is determined to make a career in the tech industry.</p>
+                    <p>After looking through my portfolio, I am confident you will see that I possess the relevant skills and potential to be a valuable employee as a web developer.</p>
+                    <p>Please enjoy looking through my portfolio, check out my Github page which is constantly being updated with new projects, and please don't hesitate to get in contact with me.</p>
                 </div>
             </div>
-            <div id="section2" onmouseenter="sectionTwoHover()" onmouseleave="sectionTwoReset()">
-                <div id="Stack" class="staticText">
-                    <ul id="stack-text" class="static-text">
-                        <li>S</li>
-                        <li>T</li>
-                        <li>A</li>
-                        <li>C</li>
-                        <li>K</li>
-                    </ul> 
-                    <h1 id="stackText-horizontal" class="horizontal-text">STACK</h1>
-                </div> 
-                <div id="stack-section">
-                    <div id="frontend" class="frontend-static" onmouseenter="frontendHover()" onmouseleave="frontendReset()">
-                        <h1 id="frontend-text">FRONT END</h1>
-                        <div id="img-div">
-                        <img src="html.PNG" id="html-img">
-                        <img src="htmlorange.PNG" id="htmlorange-img" onclick="showHTMLText()">
-                        <img src="css.PNG" id="css-img">
-                        <img src="cssorange.PNG" id="cssorange-img" onclick="showCSSText()">
-                        <img src="javascript.PNG" id="javascript-img">
-                        <img src="javascriptorange.PNG" id="javascriptorange-img" onclick="showJavaScriptText()">
-                        </div>
-                    </div>
-                        <div id="frontend-subtext">
-                            <p id="HTMLText" class="frontend-subtext">I have a deep understanding of HTML and its syntax</p>
-                            <p id="CSSText" class="frontend-subtext">I am very confident with CSS and I have an excellent understanding of the syntax and its uses. I am able to crate complexe designs and animations, making my websites and web apps more visually pleasing</p>
-                            <p id="javaScriptText" class="frontend-subtext">I have a good understanding of JavaScript, its syntax and its use cases. I am able to implement functions, for loops and use the DOM to obtain data from HTML and also from the user when needed, making my websites and web apps more interactive for the user</p>
-                        </div>
-                </div>       
-            </div>
-            <div id="section3" onmouseenter="sectionThreeHover()" onmouseleave="sectionThreeReset()">
-                <div id="Projects" class="staticText">
-                    <ul id="projects-text" class="static-text">
-                        <li>P</li>
-                        <li>R</li>
-                        <li>O</li>
-                        <li>J</li>
-                        <li>E</li>
-                        <li>C</li>
-                        <li>T</li>
-                        <li>S</li>
+        </section>
+        <section id="about-section">
+            <div id="about-section-boxes">
+                <div class="about-section-box">
+                    <ul>
+                        <li class="about-section-title">Quick Info <i class="fa-solid fa-circle-info"></i></li>
+                        <li class="about-section-links">Age: 26</li>
+                        <li class="about-section-links">Based in Manchester & Derby</li>
+                        <li class="about-section-links">I have been interested in coding and web development since a young age</li>
+                        <li class="about-section-links">In my free time I enjoy cycling, going to the gym and spending time with family</li>
+                        <li class="about-section-links">I particularly enjoy Front End Web Development</li>
                     </ul>
-                    <h1 id="projectsText-horizontal" class="horizontal-text">PROJECTS</h1>
                 </div>
-                <div id="projects-thumbnails">
-                    <div class="thumbnails">
-                        <a href="https://spontaneous-tartufo-4796dc.netlify.app/" target="_blank"><img src="/diceGameThumbNail.PNG" id="dicegame-thumbnail" onmouseenter="diceHover()" onmouseleave="diceLeave()"></a>
-                        <p id="dice-text">Dice Game</p>
-                    </div>
-                    <div class="thumbnails">
-                        <a href="https://cheerful-douhua-f0fc21.netlify.app/" target="_blank"><img src="/pianoThumbNail.PNG" id="piano-thumbnail" onmouseenter="pianoHover()" onmouseleave="pianoLeave()"></a>
-                        <p id="piano-text">Virtual Piano</p>
-                    </div>
-                    <div class="thumbnails">
-                        <a href="https://soft-snickerdoodle-94ef39.netlify.app/" target="_blank"><img src="/appleWebsiteClone.PNG" id="appleClone-thumbnail" onmouseenter="webCloneHover()" onmouseleave="webCloneLeave()"></a>
-                        <p id="web-clone-text">Apple Website Clone</p>
-                    </div>
-                </div>
-            </div>
-            <div id="section4" onmouseenter="sectionFourHover()" onmouseleave="sectionFourReset()">
-                <div id="Contact" class="staticText">
-                    <ul id="contact-text" class="static-text">
-                        <li>C</li>
-                        <li>O</li>
-                        <li>N</li>
-                        <li>T</li>
-                        <li>A</li>
-                        <li>C</li>
-                        <li>T</li>
+                <div class="about-section-box">
+                    <ul>
+                        <li class="about-section-title">Experience <i class="fa-solid fa-briefcase"></i></li>
+                        <li class="about-section-links">Passionate about Front End Web Development and actively participate in programming forums</li>
+                        <li class="about-section-links">I have created a variety of projects such as web apps, games, and eCommerce websites</li>
+                        <li class="about-section-links">Able to work with a variety of languages such as JavaScript, React and Node.js</li>
+                        <li class="about-section-links">Continuously learning on freeCodeCamp, Code Wars and YouTube</li>
                     </ul>
-                    <h1 id="contactText-horizontal" class="horizontal-text">CONTACT</h1>
                 </div>
-                <div id="contact-message">
-                    <input type="email" id="contact-email-input" placeholder="Email Adress..." autocomplete="none">
-                    <input type="text" placeholder="Name..." id="contact-name-input" autocomplete="none">
-                    <textarea id="contact-message-input" cols="30" rows="10" placeholder="Message..." autocomplete="none"></textarea> <br>
-                    <button type="submit" id="contact-send-btn" class="contact-input-btn">Send</button>
+                <div class="about-section-box">
+                    <ul>
+                        <li class="about-section-title">Skills <i class="fa-solid fa-book-open"></i></li>
+                        <li class="about-section-links">Ability to work well within a team and contribute ideas</li>
+                        <li class="about-section-links">Strong knowledge of both front end and back end development</li>
+                        <li class="about-section-links">Ability to write clean, readable code whilst using best practice</li>
+                        <li class="about-section-links">Able to work in an Agile environment</li>
+                        <li class="about-section-links">Ability to brainstorm and draw out ideas/layouts using Trello & Figma</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <script src="main.js"></script>
+            <div id="about-me-text" class="container">
+                <p>I am a hard working individual who has a passion for creating responsive web applications. I have recently completed a 3 month intensive full stack coding bootcamp course with Codenation, where I learnt HTML5, CSS, JavaScript including React.js and Node.js. I also learned key skills such as undertaking stand up meetings with my colleagues, pair programming and writing clean, readable code. 
+                </p>
+            </div> 
+        </section>
+        <section id="tech-stack-section">
+                <h1>Tech Stack</h1>
+            <div id="tech-stack-logos">
+                <div class="tech-logo">
+                    <img src="/images/html-logo.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/css-logo.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/javascript-logo.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/mysql-logo.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/react-logo.png" alt="React" id="react-logo">
+                    <p>React.js</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/node-js-logo.png" alt="Node" id="node-logo">
+                    <p>Node.js</p>
+                </div>
+                <div class="tech-logo">
+                    <img src="/images/mongodb-logo.png" alt="MongoDB" id="mongoDB-logo">
+                    <p>MongoDB</p>
+                </div>
+            </div>
+        </section>
+        <section id="experience-section">
+            <h1>Experience</h1>
+            <h2>Codenation Bootcamp</h2>
+            <div id="experience-text">
+                <div>    
+                    <p>After looking for a career change, in April 2022 I took the brave decision of leaving my job and enrolling in a 3 month full stack web development bootcamp with Codenation.</p>
+                    <p>During my time with Codenation, I learned HTML, CSS & JavaScript. I also learned quite a few JavaScript frameworks such as React.js and Node.js</p>
+                    <p>I learned lots of skills, both coding related and interpersonal skills such as:</p>
+                    <ul>
+                        <li>Working on my own and also within a team</li>
+                        <li>Contributing ideas and participating in daily stand up meetings</li>
+                        <li>Server-side programming using Node.js and NPM</li>
+                        <li>DOM manipulation using JavaScript</li>
+                        <li>CRUD operations and working with databases using MySQL and MongoDB</li>
+                        <li>Creating web servers using Express.js</li>
+                    </ul>
+                    <p>The bootcamp was 12 weeks long, and it was split so that we spent the first 6 weeks learning front end and the last six weeks learning back end web development</p>
+                    <p>During the bootcamp I learned skills such as pair programming, object orientated programming and CI/CD principles</p>
+                    <p>I created and participated in numerous personal & team projects, all of which are available to view on my <a href="https://github.com/moh-qureshi">Github.</a></p>    
+                </div>
+                <img src="/images/codenation-certificate.PNG" alt="Codenation certificate">
+            </div>
+        </section>
+        <section id="projects-section">
+            <h1>Projects</h1>
+            <div id="slider-arrows">
+                <i class="fa-solid fa-arrow-left" onclick="moveLeft()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="moveRight()"></i>
+            </div>
+            <div id="projects-slider">
+                <div class="project-thumbnail">
+                    <p class="project-title">Snake Game</p>
+                    <img src="/images/snake-game-thumbnail.PNG" alt="Snake Game" class="thumbnail">
+                    <div class="project-links">
+                        <p><a href="https://superb-syrniki-da2c79.netlify.app/" target="_blank">View Site</a></p>
+                        <p><a href="https://github.com/moh-qureshi/snake-game" target="_blank">View Github</a></p>
+                        <p id="snake-more-info" onclick="showSnakeInfo()">More Info</p>
+                    </div>
+                    <div class="project-info"></div>
+                </div>
+                <div class="project-thumbnail">
+                    <p class="project-title">Weather App</p>
+                    <img src="/images/weather-app-thumbnail.PNG" alt="Weather App" class="thumbnail">
+                    <div class="project-links">
+                        <p><a href="https://tiny-seahorse-60ebce.netlify.app/" target="_blank">View Site</a></p>
+                        <p><a href="https://github.com/moh-qureshi/weather-app" target="_blank">View Github</a></p>
+                        <p id="weather-more-info" onclick="showWeatherInfo()">More Info</p>
+                    </div>
+                    <div class="project-info"></div>
+                </div>
+                <div class="project-thumbnail">
+                    <p class="project-title">Footasylum Clone</p>
+                    <img src="/images/footasylum-clone-thumbnail.PNG" alt="Footasylum Clone" class="thumbnail">
+                    <div class="project-links">
+                        <p><a href="https://capable-kulfi-cd4ba4.netlify.app/" target="_blank">View Site</a></p>
+                        <p><a href="https://github.com/moh-qureshi/footasylumWeb" target="_blank">View Github</a></p>
+                        <p id="footasylum-more-info" onclick="showFootasylumInfo()">More Info</p>
+                    </div>
+                    <div class="project-info"></div>
+                </div>
+                <div class="project-thumbnail">
+                    <p class="project-title">Dice Game</p>
+                    <img src="/images/dice-game-thumbnail.PNG" alt="Dice Game" class="thumbnail">
+                    <div class="project-links">
+                        <p><a href="https://spontaneous-tartufo-4796dc.netlify.app/" target="_blank">View Site</a></p>
+                        <p><a href="https://github.com/moh-qureshi/dice-game" target="_blank">Github</a></p>
+                        <p id="dice-more-info" onclick="showDiceInfo()">More Info</p>
+                    </div>
+                    <div class="project-info"></div>
+                </div>
+            </div>
+            <div class="project-text" id="snake-game-info">
+                    <div class="desc-box">
+                        <h1>Info</h1>
+                        <p>I created a snake game where the user moves around the snake using the arrow keys collecting food.</p>
+                        <p>As the snake eats each food, the snake gets bigger and faster, gradually making the game more difficult.</p>
+                        <p>The game ends if the snake's head touches any part of its body, or if the snake hits the end of the game screen.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Features</h1>
+                        <p>The snake game comes complete with a full levelling and scoring system, where the game gets more difficult as the levels progress.</p>
+                        <p>The UI also grants several options to the user for how they would like to play the game, such as turning the music or sound off, and whether they would like to play the game in light mode or dark mode.</p>
+                        <p>With the sound setting on, the game features nice background music along with audio cues when the user reaches a new level or every time the snake eats the food.</p>
+                        <p>There is also a pause game function if the user decides to take a break and also a new game function if the user wants to restart.</p>
+                        <p>Once the game is over, the game displays the final score to the user, and allow the user to start a new game.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Design</h1>
+                        <p>The snake game features various shades of green which are consistent through each menu, and the colour changes to a darker shade if the user selects dark mode.</p>
+                        <p>The game screen is placed at the center of the screen, and makes up nearly all of the webpage. The game screen is differentiated from the background with a darker shade, keeping consistent with the design colours.</p>
+                        <p>The navbar is situated at the top of the webpage to allow the user to see all of the various information and settings easily on the screen whilst playing the game.</p>
+                    </div>
+                </div>
+            <div class="project-text" id="weather-app-info">
+                    <div class="desc-box">
+                        <h1>Info</h1>
+                        <p>I created a weather app which allows the user to input an address by searching either a city/town name or postcode.</p>
+                        <p>After searching the inputted location, the app then displays the current weather along with some other various useful information such as the current time, the day of the week and the temperature.</p>
+                        <p>Once a location is entered, a navigation bar appears at the top of the screen along with some information and another search bar, where the user is also able to search a different location.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Features</h1>
+                        <p>The weather app features a dynamic background where the image changes depending on the weather of the location and the time of the location.</p>
+                        <p>The UI also automatically changes to light mode or dark mode depending on the time of the inputted location.</p>
+                        <p>The icons used to display the weather allow the user to quickly and easily see what the weather is like in the inputted location.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Design</h1>
+                        <p>The landing page of the weather app is simplistic and the user is greeted with a search bar which alerts the user to enter a location.</p>
+                        <p>The app gets the data from a weather API I used, and displays the information in a clean, readable format to the user.</p>
+                        <p>The location information is displayed on the navbar at the top of the screen and the main weather information is displayed in the center. Other useful/advanced weather information is displayed in a marquee under the navigation bar.</p>
+                    </div>
+                </div>
+            <div class="project-text" id="footasylum-info">
+                    <div class="desc-box">
+                        <h1>Info</h1>
+                        <p>I created a clone of the Footasylum website, complete with all the various sections and drop down menus.</p>
+                        <p>I also implemented some minor changes which in my opinion better optimises the website and improves the layout.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Features</h1>
+                        <p>The clone features image sliders along with arrows which allow the user to navigate through different sections of the website.</p>
+                        <p>The navigation bar also features drop down animations which give an interactive feel to the website.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Design</h1>
+                        <p>I used flexbox to structure the layout of the website and to display the different sections of the website clearly to the user.</p>
+                        <p>The design of the website looks very professional and has keeps with the colours of the logo to provide a nice theme throughout the webpage.</p>
+                    </div>
+                </div>
+            <div class="project-text" id="dice-game-info">
+                    <div class="desc-box">
+                        <h1>Info</h1>
+                        <p>I created a dice game using JavaScript where the user can either play alone or with a friend.</p>
+                        <p>There are different rules to the game depending on how many players are playing. However the rules are shown to the user(s) before starting the game.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Features</h1>
+                        <p>The user(s) can input their names at the beginning of the game to make it more personal.</p>
+                        <p>Audio cues when starting a game, winning or losing further adds to the game experience.</p>
+                        <p>When a player wins or loses, a message is displayed to the user(s) containing the final score, and whether they want to go to the main menu or start again.</p>
+                    </div>
+                    <div class="desc-box">
+                        <h1>Design</h1>
+                        <p>The dice game is structured as a single game screen which is displayed in the center of the page.</p>
+                        <p>The text explaining the rules of the game is shown clearly to the user(s) and makes it easily understandable.</p>
+                        <p>The buttons are nice and clear and the colour theme of the website is consistent on each game screen section.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-section">
+            <h1>Contact Me</h1>
+            <div id="email-section">
+                <p>If you have any questions or would like to contact me please send me an email and I will get back to you as soon as possible</p>
+                <form action="https://formsubmit.co/h-qureshi95@hotmail.co.uk" method="POST">
+                    <input type="hidden" name="_next" value="#">
+                    <input type="email" name="email" placeholder="Email Address..." required>
+                    <input type="text" name="name" placeholder="Name..." required>
+                    <input type="text" name="message" placeholder="Write Message Here..." id="message-input" required>
+                    <button type="submit">Send <i class="fa-solid fa-envelope"></i></button>
+                </form>
+            </div>
+            <div id="contact-links">
+                <a href="https://www.linkedin.com/in/mohammed-h-qureshi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/moh-qureshi" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+        </section>
+        <script src="/main.js"></script>
     </body>
 </html>
