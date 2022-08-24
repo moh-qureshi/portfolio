@@ -129,11 +129,14 @@ contactSection.addEventListener("mouseenter", () =>{
 let projectsSliderPosition = 0
 
 function moveRight(){
-    if(window.innerWidth > 768 && projectsSliderPosition !== 2460){
+    if(window.outerWidth > 768 && projectsSliderPosition !== 2460){
         projectsSliderPosition += 820
         projectsSlider.scroll(projectsSliderPosition, 0)
-    }else if(window.innerWidth === 768 && projectsSliderPosition !== 1383){
+    }else if(window.outerWidth <= 768 && window.outerWidth > 425 && projectsSliderPosition !== 1383){
         projectsSliderPosition += 461
+        projectsSlider.scroll(projectsSliderPosition, 0)
+    } else if(window.outerWidth <= 425 && projectsSliderPosition !== 1275){
+        projectsSliderPosition += 425
         projectsSlider.scroll(projectsSliderPosition, 0)
     }
     hideSnakeInfo()
@@ -143,11 +146,14 @@ function moveRight(){
 }
 
 function moveLeft(){
-    if(window.innerWidth > 768 && projectsSliderPosition >= 820){
+    if(window.outerWidth > 768 && projectsSliderPosition >= 820){
         projectsSliderPosition -= 820
         projectsSlider.scroll(projectsSliderPosition, 0)
-    } else if(window.innerWidth === 768 && projectsSliderPosition >= 461){
+    } else if(window.outerWidth <= 768 && window.outerWidth > 425 && projectsSliderPosition >= 461){
         projectsSliderPosition -= 461
+        projectsSlider.scroll(projectsSliderPosition, 0)
+    }else if(window.outerWidth <= 425 && projectsSliderPosition !== 1275){
+        projectsSliderPosition -= 425
         projectsSlider.scroll(projectsSliderPosition, 0)
     }
     hideSnakeInfo()

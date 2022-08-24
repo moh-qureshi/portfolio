@@ -12,7 +12,7 @@
 
 #nav{
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid orange;
@@ -425,5 +425,33 @@ form button:hover{
     }
     #email-section{
         padding: 0 10vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #experience-text div{
+        width: 160vw;
+    }
+    #slider-arrows{
+        top: 40vh;
+    } 
+    #projects-slider{
+        margin-left: 40vw;
+        width: 100vw;
+    }
+    .project-thumbnail img{
+        height: 50vh;
+        width: 100vw;
+    }   
+    .project-links p{
+        margin: 20px 35px;
+    }
+    .desc-box{
+        font-size: 0.8em;
+        margin-bottom: 2vh;
+        width: 160vw;
+    }
+    form input{
+        width: 80vw;
     }
 }
