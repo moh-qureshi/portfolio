@@ -177,8 +177,8 @@ function moveLeft(){
     hideFootasylumInfo()
     hideDiceInfo()
 }
-leftArrow.addEventListener("click", moveLeft)
-rightArrow.addEventListener("click", moveRight)
+leftArrow.addEventListener("mousedown", moveLeft)
+rightArrow.addEventListener("mousedown", moveRight)
 
 function showSnakeInfo(){
     snakeGameInfo.style.display = "flex"
