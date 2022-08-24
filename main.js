@@ -30,6 +30,7 @@ const diceGameInfo = document.getElementById("dice-game-info")
 //contact section
 const contactSection = document.getElementById("contact-section")
 
+
 const welcomeText = document.getElementById("welcome-text")
 const text = ["Welcome To My Portfolio", "Aspiring FrontEnd Developer", "Creative Mastermind", "Passionate About Web Design"]
 let mode = "light"
@@ -128,25 +129,31 @@ contactSection.addEventListener("mouseenter", () =>{
 let projectsSliderPosition = 0
 
 function moveRight(){
-    if(projectsSliderPosition !== 2460){
+    if(window.innerWidth > 768 && projectsSliderPosition !== 2460){
         projectsSliderPosition += 820
         projectsSlider.scroll(projectsSliderPosition, 0)
-        hideSnakeInfo()
-        hideWeatherInfo()
-        hideFootasylumInfo()
-        hideDiceInfo()
+    }else if(window.innerWidth === 768 && projectsSliderPosition !== 1383){
+        projectsSliderPosition += 461
+        projectsSlider.scroll(projectsSliderPosition, 0)
     }
+    hideSnakeInfo()
+    hideWeatherInfo()
+    hideFootasylumInfo()
+    hideDiceInfo()
 }
 
 function moveLeft(){
-    if(projectsSliderPosition >= 820){
+    if(window.innerWidth > 768 && projectsSliderPosition >= 820){
         projectsSliderPosition -= 820
         projectsSlider.scroll(projectsSliderPosition, 0)
-        hideSnakeInfo()
-        hideWeatherInfo()
-        hideFootasylumInfo()
-        hideDiceInfo()
+    } else if(window.innerWidth === 768 && projectsSliderPosition >= 461){
+        projectsSliderPosition -= 461
+        projectsSlider.scroll(projectsSliderPosition, 0)
     }
+    hideSnakeInfo()
+    hideWeatherInfo()
+    hideFootasylumInfo()
+    hideDiceInfo()
 }
 
 function showSnakeInfo(){

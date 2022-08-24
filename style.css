@@ -7,12 +7,12 @@
 
 
 .container{
-    margin: 0 20px;
+    margin: 0 2px;
 }
 
 #nav{
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid orange;
@@ -23,7 +23,7 @@
 #navbar{
     display: flex;
     list-style: none;
-    font-size: 30px;
+    font-size: 1.875em;
 }
 #navbar li{
     margin: 0 40px;
@@ -46,13 +46,13 @@
 }
 
 #profile-img{
-    height: 400px;
+    height: 60vh;
     border-radius: 50px;
     border: 2px solid orange;
 }
 
 #welcome-title{
-    font-size: 80px;
+    font-size: 5em;
     margin-bottom: 50px;
 }
 
@@ -347,5 +347,83 @@ form button:hover{
     }
     100%{
         transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 768px;
+    }
+
+    #navbar, #nav{
+        font-size: 1.1em;
+        justify-content: center;
+    }
+
+    #navbar li{
+        margin: 0 25px;
+    }
+    #welcome-section, #welcome-text-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    #welcome-section img{
+        height: 40vh;
+        width: 50vw;
+    }
+    .about-section-box, #about-me-text{
+        font-size: 1em;
+    }
+    .about-section-title{
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .tech-logo img{
+        height: 80px;       
+    }
+
+    #experience-text{
+        font-size: 1em;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #experience-text div{
+        width: 80vw;
+    }
+
+
+    #experience-text img{
+        height: 40vh;
+        width: 40vw;
+    }
+
+    #slider-arrows{
+        top: 25vh;
+    }
+
+    .project-thumbnail img{
+        height: 30vh;
+    }
+
+    .project-links{
+        font-size: 0.7em;
+    }
+
+    .project-text{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desc-box{
+        font-size: 0.8em;
+        margin-bottom: 2vh;
+        width: 90vw;
+    }
+    #email-section{
+        padding: 0 10vw;
     }
 }
